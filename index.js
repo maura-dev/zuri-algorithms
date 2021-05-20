@@ -36,11 +36,11 @@ convertFahrToCelsius({"temp":0})
 function checkYuGiOh(n){
 	
 	if(isNaN(n)==true){
-		console.log(`invalid parameter: "${n}"`)
+		return `invalid parameter: "${n}"`
 	}
 
 	else if(typeof(n)=="boolean"){
-		console.log(`invalid parameter: "${n}"`)
+		return `invalid parameter: "${n}"`
 	}
 
 	else{
@@ -72,7 +72,7 @@ function checkYuGiOh(n){
 				arr.push(i);
 			}
 		}
-		console.log(arr);
+		return arr;
 	}
 
 }
