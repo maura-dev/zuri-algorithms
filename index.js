@@ -9,6 +9,11 @@ function convertFahrToCelsius(num){
 		return `${num} is not a valid number but a/an ${typeof(num)}`;
 	}
 
+	else if(num===""){
+			return ` "" is not a valid number but a/an string`;
+		}
+
+
 	else if(isNaN(num)==true){
 		var inputType= typeof(num);
 		if(inputType=="object"){
@@ -25,13 +30,15 @@ function convertFahrToCelsius(num){
 	else{
 		var x= Number(num)-32;
 		var y= 0.55555556 * x;
-		return y.toFixed(4)
+		return Number(y.toFixed(4))
 	}
 }
 
-convertFahrToCelsius(0)
-convertFahrToCelsius([1,2,3])
-convertFahrToCelsius({"temp":0})
+//convertFahrToCelsius(0)
+//convertFahrToCelsius([1,2,3])
+//convertFahrToCelsius({"temp":0})
+
+
 
 function checkYuGiOh(n){
 	
@@ -41,6 +48,14 @@ function checkYuGiOh(n){
 
 	else if(typeof(n)=="boolean"){
 		return `invalid parameter: "${n}"`
+	}
+
+	else if(n===""){
+		return `invalid parameter: ""`
+	}
+
+	else if(n===0|| n==="0"){
+		return `invalid parameter: ${n}`
 	}
 
 	else{
@@ -77,9 +92,9 @@ function checkYuGiOh(n){
 
 }
 
-checkYuGiOh(10)
-checkYuGiOh("5")
-checkYuGiOh("fizzbuzz is meh")
+//checkYuGiOh(10)
+//checkYuGiOh("5")
+//checkYuGiOh("fizzbuzz is meh")
 
 
 
